@@ -11,11 +11,15 @@
    Enjoy!
 """
 import math
+import time
+import random
 import os
 
 os.system('clear')
+start = time.time()
+
 # our string
-a_string = "abcce"
+a_string = "pineapple"
 
 # preallocate variables
 word_list = [""] 
@@ -30,6 +34,9 @@ word_list[0] = a_string
 char_list = list(a_string)
 
 for word_count in range (0, math.factorial(len(a_string))):
+    
+    runtime = time.time()
+    print("\r%d iterations, %d nested iterations and %f seconds so far...." % (word_count, word_count*4*(len(char_list)**2), runtime-start), end="")
     
     for n in range (0, len(char_list)):
         
@@ -100,6 +107,11 @@ for word_count in range (0, math.factorial(len(a_string))):
                 word_count = word_count + 1
                 word_list.append(new_word)
 
-
 # finally, a probably (in)complete anagram list
-print("%s, %d" % (word_list, len(word_list)))
+print("\n\n%d Unique hits on the Spot for the word '%s', Sire!!" % (len(word_list), a_string))
+print("Today we would proudly suggest you the anagram '%s' as a replacement instead." % random.choice(word_list))
+
+end = time.time()
+print("-----------------------------------------------------------------")
+print("%f time elapsed. %d main iterations %d nested iterations." % (end-start, word_count, word_count*4*(n*p) ))
+

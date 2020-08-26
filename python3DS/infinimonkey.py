@@ -1,4 +1,11 @@
+"""
+   Just a relaxed approach to the Infinite Monkey Theorem.
+   Proof of Concept: not quite documented yet, I fear.
 
+   More information and amenities there:
+   https://en.wikipedia.org/wiki/Infinite_monkey_theorem
+   https://youtu.be/yZS_vb549cc 
+"""
 import string
 import random
 

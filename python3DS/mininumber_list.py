@@ -1,11 +1,8 @@
-import time
-import random
-
 """
     Programa para evaluar el orden de magnitud
     (Big O) de ejecución de dos funciones, con 
     orden O(N) y O(N**2) respectivamente.
-    
+
     mi_number_n1
     mi_number_n2
 
@@ -13,7 +10,11 @@ import random
     enteros, autogenerada. max_numbers define 
     el tamaño de la lista, generada por números
     de forma aleatoria.
+
+
 """
+import time
+import random
 
 # Función para localizar el número mínimo en una lista de enteros, O(N)
 def minumber_n1(list):
@@ -55,6 +56,8 @@ def main():
     end = time.time()
     print("n1 %d <-- %f" % (minumber, end-start))
     
+# La solución del curso de Python en RuneStone Academy, a continuación.
+# https://runestone.academy/runestone/books/published/pythonds3/index.html
 def teacher():
     for listSize in range(1000,10001,1000):
         number_list = [random.randrange(100000) for x in range(listSize)]

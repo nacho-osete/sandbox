@@ -9,7 +9,6 @@
    good programming example but quite highly tinkable!
 
    Enjoy!
-
 """
 import math
 import os

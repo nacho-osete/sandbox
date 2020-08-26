@@ -101,5 +101,5 @@ for word_count in range (0, math.factorial(len(a_string))):
                 word_list.append(new_word)
 
 
-# finally! anagram massacre!! list -> set == game over!
+# finally, a probably (in)complete anagram list
 print("%s, %d" % (word_list, len(word_list)))

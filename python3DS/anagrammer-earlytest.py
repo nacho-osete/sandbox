@@ -19,7 +19,7 @@ os.system('clear')
 start = time.time()
 
 # our string
-a_string = "pineapple"
+a_string = "pineapp"
 
 # preallocate variables
 word_list = [""] 
@@ -30,6 +30,7 @@ new_word = ""
 
 # we put our string in the first position of the final list
 char_index = 0
+nest_count = 0
 word_list[0] = a_string
 char_list = list(a_string)
 
@@ -40,7 +41,11 @@ for word_count in range (0, math.factorial(len(a_string))):
     
     for n in range (0, len(char_list)):
         
+        nest_count = nest_count + 1
+
         for p in range (0, len(char_list)):
+
+            nest_count = nest_count + 1
 
             # swapping characters
             char_tmp = char_list[n]
@@ -57,8 +62,12 @@ for word_count in range (0, math.factorial(len(a_string))):
     
     for n in range (len(char_list)-1, 0, -1):
         
+        nest_count = nest_count + 1
+
         for p in range (len(char_list)-1, 0, -1):
-               
+            
+            nest_count = nest_count + 1
+
             # swapping characters
             char_tmp = char_list[p]
             char_list[p] = char_list[n]
@@ -74,8 +83,12 @@ for word_count in range (0, math.factorial(len(a_string))):
 
     for n in range (len(char_list)-1, 0, -1):
         
+        nest_count = nest_count + 1
+
         for p in range (0, len(char_list)-1):
-               
+            
+            nest_count = nest_count + 1
+            
             # swapping characters
             char_tmp = char_list[p]
             char_list[p] = char_list[n]
@@ -92,8 +105,12 @@ for word_count in range (0, math.factorial(len(a_string))):
 
     for n in range (0, len(char_list)-1):
         
+        nest_count = nest_count + 1
+
         for p in range (len(char_list)-1, 0, -1):
-               
+            
+            nest_count = nest_count + 1
+
             # swapping characters
             char_tmp = char_list[p]
             char_list[p] = char_list[n]
@@ -113,5 +130,5 @@ print("Today we would proudly suggest you the anagram '%s' as a replacement inst
 
 end = time.time()
 print("-----------------------------------------------------------------")
-print("%f time elapsed. %d main iterations %d nested iterations." % (end-start, word_count, word_count*4*(n*p) ))
+print("%f time elapsed. %d main iterations %d nested iterations." % (end-start, word_count, nest_count ))
 

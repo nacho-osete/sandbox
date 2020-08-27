@@ -18,4 +18,3 @@ for i in range(10_000, 1_000_001, 20_000):
     dict_time = t.timeit(number=1000)
     print(f"{i:<10,}{lst_time:>10.3f}{dict_time:>10.3f}")
 
-    

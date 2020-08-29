@@ -39,5 +39,4 @@ def hot_potato(name_list, num):
     # At last, we dequeue the last item present at the front of the queue
     return sim_queue.dequeue()
 
-
 print(hot_potato(["Bill", "David", "Susan", "Jane", "Kent", "Brad"], 4))
